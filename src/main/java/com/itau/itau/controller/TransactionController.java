@@ -2,6 +2,7 @@ package com.itau.itau.controller;
 
 import com.itau.itau.model.Transaction;
 import com.itau.itau.service.TransactionService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class TransactionController {
     }
 
     @PostMapping
-    public List<Transaction> create(@RequestBody Transaction transaction) {
+    public List<Transaction> create(@RequestBody @Valid Transaction transaction) {
         return transactionService.addTransaction(transaction);
     }
 
