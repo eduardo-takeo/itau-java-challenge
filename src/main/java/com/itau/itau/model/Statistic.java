@@ -7,9 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Statistics {
-    private Integer count;
-    private Float avg;
-    private Float min;
-    private Float max;
+public class Statistic {
+    private long count;
+    private double sum;
+    private double avg;
+    private double min;
+    private double max;
 }
